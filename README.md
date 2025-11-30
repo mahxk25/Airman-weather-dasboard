@@ -1,2 +1,44 @@
-# Airman-weather-dasboard
-✈️ AIRMAN — Modern Weather Dashboard for Pilots &amp; Students, This is a minimal, fast and beautifully animated weather dashboard designed for pilots, aviation students, and enthusiasts. It gives a clear, modern view of runway conditions, visibility, temperature, wind, humidity, and flight readiness for major airports.
+🌈 Highlights
+✈️ 1. Premium Hero Section
+
+Plane enters with a bounce animation
+
+Soft glow & depth effects
+
+Realistic cloud background
+
+Clean aviation-grade typography
+
+🌦️ 2. Weather Reactive Airport Cards
+
+Neon accents: Green → Good, Yellow → Marginal, Blue → Excellent
+
+Soft backgrounds extracted from airport cloud images
+
+Hover float + shine animation
+
+Scroll-triggered reveal animations
+
+Hourly mini-forecast with icons
+
+📊 3. Summary Section
+
+Best visibility
+
+Highest temperature
+
+Rain alerts
+
+Average readiness score
+
+🎬 4. Intro Animation
+
+AIRMAN logo appears with rising letters
+
+Smooth exit transition
+
+Auto-shift to hero section
+
+📱 5. Fully Responsive
+
+Scales perfectly on mobile, tablets and desktop
