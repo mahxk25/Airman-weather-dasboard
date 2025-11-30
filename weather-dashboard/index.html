@@ -1,0 +1,220 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8"/>
+  <meta name="viewport" content="width=device-width,initial-scale=1"/>
+  <title>AIRMAN — Weather Dashboard (Final)</title>
+
+  <!-- Font -->
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+
+  <link rel="stylesheet" href="style.css"/>
+</head>
+<body>
+
+  <!-- INTRO -->
+  <div id="intro-screen" aria-hidden="false">
+    <div class="intro-inner" id="introInner" role="dialog" aria-label="Intro">
+      <div class="intro-logo"><img src="images.png" alt="AIRMAN logo"></div>
+      <div class="intro-text" aria-hidden="true">
+        <span>A</span><span>I</span><span>R</span><span>M</span><span>A</span><span>N</span>
+      </div>
+    </div>
+  </div>
+
+  <!-- NAV -->
+  <nav aria-label="Main">
+    <div class="nav-card" role="navigation">
+      <div class="nav-left">
+        <div class="logo"><img src="images.png" alt="AIRMAN logo" style="width:100%"></div>
+        <div class="title"><h1>AIRMAN</h1><p>Weather dashboard</p></div>
+      </div>
+      <div class="nav-links" role="menubar" aria-label="Main links">
+        <a href="#home">Home</a>
+        <a href="#airports">Airports</a>
+        <a href="#summary">Summary</a>
+        <a href="#about">About</a>
+      </div>
+    </div>
+  </nav>
+
+  <!-- HERO -->
+  <header class="hero" id="home" role="banner" aria-label="Hero">
+    <img src="cloud.jpg" class="hero-bg" alt="Cloud background">
+    <div class="ring" aria-hidden="true"></div>
+
+    <div class="hero-left">
+      <h1>Weather briefing made clear for pilots &amp; students</h1>
+      <p>Quickly understand runway conditions, visibility and flight readiness — all in one calm, modern briefing.</p>
+
+      <div class="tags" aria-hidden="true">
+        <div class="tag">VOMM</div>
+        <div class="tag">VOBL</div>
+        <div class="tag">VIDP</div>
+      </div>
+    </div>
+
+    <div class="hero-right">
+      <!-- glow layer behind plane for softness -->
+      <div class="hero-plane-glow" style="background: radial-gradient(closest-side, rgba(255,255,255,0.9), rgba(255,255,255,0));"></div>
+      <img src="plane-1.png" id="heroPlane" class="hero-plane" alt="Airplane">
+    </div>
+  </header>
+
+  <!-- CARDS (stacked vertical) -->
+  <main>
+
+    <section id="airports" class="cards-wrap" aria-label="Airports cards">
+
+      <!-- VOMM -->
+      <article class="weather-card bg-chennai" data-code="VOMM" data-readiness="Good">
+        <div class="accent good" aria-hidden="true"></div>
+
+        <div class="card-left">
+          <div class="code">VOMM</div>
+          <div class="airport-name">Chennai International Airport</div>
+          <div class="airport-sub">Runway status • Surface conditions • TAF remarks (sample)</div>
+        </div>
+
+        <div class="card-center">
+          <div class="temp-big">31°</div>
+          <div class="condition">Partly Cloudy</div>
+
+          <div class="meta-row">
+            <div class="meta-pill">🌬 Wind 8 kts</div>
+            <div class="meta-pill">👁 Vis 9 km</div>
+            <div class="meta-pill">💧 Hum 62%</div>
+            <div class="meta-pill">📈 1008 hPa</div>
+            <div class="meta-pill">☔ Rain 15%</div>
+          </div>
+
+          <div class="hourly" aria-hidden="true">
+            <div class="hour"><div class="t">12 PM</div><small>32° • Sunny</small></div>
+            <div class="hour"><div class="t">2 PM</div><small>33° • Sunny</small></div>
+            <div class="hour"><div class="t">4 PM</div><small>31° • Partly Cloudy</small></div>
+          </div>
+
+          <div style="margin-top:12px; color:#6b6c70;">Surface: DRY • TAF: available • Remarks: sample data</div>
+        </div>
+
+        <div class="card-right">
+          <div class="temp-right">31°</div>
+          <div class="condition" style="color:#6b6c70;">Partly Cloudy</div>
+          <div class="readiness-pill good" style="margin-top:12px;">Good</div>
+        </div>
+      </article>
+
+      <!-- VOBL -->
+      <article class="weather-card bg-banglore" data-code="VOBL" data-readiness="Marginal">
+        <div class="accent marginal" aria-hidden="true"></div>
+
+        <div class="card-left">
+          <div class="code">VOBL</div>
+          <div class="airport-name">Bengaluru International Airport</div>
+          <div class="airport-sub">Runway status • Surface conditions • TAF remarks (sample)</div>
+        </div>
+
+        <div class="card-center">
+          <div class="temp-big">27°</div>
+          <div class="condition">Overcast</div>
+
+          <div class="meta-row">
+            <div class="meta-pill">🌬 Wind 6 kts</div>
+            <div class="meta-pill">👁 Vis 7 km</div>
+            <div class="meta-pill">💧 Hum 70%</div>
+            <div class="meta-pill">📈 1005 hPa</div>
+            <div class="meta-pill">☔ Rain 60%</div>
+          </div>
+
+          <div class="hourly" aria-hidden="true">
+            <div class="hour"><div class="t">12 PM</div><small>28° • Cloudy</small></div>
+            <div class="hour"><div class="t">2 PM</div><small>27° • Light Rain</small></div>
+            <div class="hour"><div class="t">4 PM</div><small>26° • Rain Showers</small></div>
+          </div>
+
+          <div style="margin-top:12px; color:#6b6c70;">Surface: DRY • TAF: available • Remarks: sample data</div>
+        </div>
+
+        <div class="card-right">
+          <div class="temp-right">27°</div>
+          <div class="condition" style="color:#6b6c70;">Overcast</div>
+          <div class="readiness-pill marginal" style="margin-top:12px;">Marginal</div>
+        </div>
+      </article>
+
+      <!-- VIDP -->
+      <article class="weather-card bg-delhi" data-code="VIDP" data-readiness="Excellent">
+        <div class="accent excellent" aria-hidden="true"></div>
+
+        <div class="card-left">
+          <div class="code">VIDP</div>
+          <div class="airport-name">Delhi International Airport</div>
+          <div class="airport-sub">Runway status • Surface conditions • TAF remarks (sample)</div>
+        </div>
+
+        <div class="card-center">
+          <div class="temp-big">24°</div>
+          <div class="condition">Clear Sky</div>
+
+          <div class="meta-row">
+            <div class="meta-pill">🌬 Wind 4 kts</div>
+            <div class="meta-pill">👁 Vis 10 km</div>
+            <div class="meta-pill">💧 Hum 55%</div>
+            <div class="meta-pill">📈 1010 hPa</div>
+            <div class="meta-pill">☔ Rain 0%</div>
+          </div>
+
+          <div class="hourly" aria-hidden="true">
+            <div class="hour"><div class="t">12 PM</div><small>25° • Clear Sky</small></div>
+            <div class="hour"><div class="t">2 PM</div><small>26° • Clear Sky</small></div>
+            <div class="hour"><div class="t">4 PM</div><small>24° • Haze</small></div>
+          </div>
+
+          <div style="margin-top:12px; color:#6b6c70;">Surface: DRY • TAF: available • Remarks: sample data</div>
+        </div>
+
+        <div class="card-right">
+          <div class="temp-right">24°</div>
+          <div class="condition" style="color:#6b6c70;">Clear Sky</div>
+          <div class="readiness-pill excellent" style="margin-top:12px;">Excellent</div>
+        </div>
+      </article>
+
+    </section>
+
+    <!-- SUMMARY -->
+    <section id="summary" class="summary-wrap" aria-label="Overall summary">
+      <div style="display:flex;justify-content:space-between;align-items:center;margin-bottom:12px">
+        <h2 style="font-size:18px;font-weight:800">Overall Summary</h2>
+        <div style="color:#7b7c80;font-size:13px">Last updated: Oct 31, 2025</div>
+      </div>
+
+      <div class="summary-grid" aria-hidden="false">
+        <div class="summary-item">
+          <h5>Best Visibility</h5>
+          <p>Delhi (10 km)</p>
+        </div>
+        <div class="summary-item">
+          <h5>Highest Temperature</h5>
+          <p>Chennai (31°C)</p>
+        </div>
+        <div class="summary-item">
+          <h5>Rain Alerts</h5>
+          <p>Bengaluru</p>
+        </div>
+        <div class="summary-item">
+          <h5>Average Flight Readiness</h5>
+          <p>Good</p>
+        </div>
+      </div>
+    </section>
+
+  </main>
+
+  <footer style="text-align:center;color:#6b6c70;padding:30px 0">© 2025 AIRMAN • Weather Dashboard</footer>
+
+
+  <script src="main.js"></script>
+
+</body>
+</html>
